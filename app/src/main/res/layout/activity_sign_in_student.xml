@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/hackathon"
+    tools:context=".signInStudent">
 
-    tools:context=".signInAdmin">
 
     <Button
         android:id="@+id/login"
@@ -38,11 +38,12 @@
         android:layout_width="235dp"
         android:layout_height="77dp"
         android:ems="10"
-        android:hint="Enter Employee code"
+        android:hint="Enter Roll Number"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.327" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

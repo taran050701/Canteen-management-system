@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppAlpha">
-        <activity android:name=".menuScreen"></activity>
+        <activity android:name=".lunchList"></activity>
+        <activity android:name=".bevList" />
+        <activity android:name=".snacksList" />
+        <activity android:name=".menuScreen" />
         <activity android:name=".signInStudent" />
         <activity android:name=".signInAdmin" />
-        <activity
-            android:name=".MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

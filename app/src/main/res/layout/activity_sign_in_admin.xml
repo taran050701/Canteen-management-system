@@ -4,22 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hackathon"
+    android:background="@drawable/background"
 
     tools:context=".signInAdmin">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="274dp"
+
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:text="WELCOME"
+        android:textColor="#edd5bb"
+
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.126" />
 
     <Button
         android:id="@+id/login"
         android:layout_width="235dp"
         android:layout_height="77dp"
+        android:backgroundTint="#AB9559"
         android:text="Login"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.652" />
+        app:layout_constraintVertical_bias="0.729" />
 
     <EditText
         android:id="@+id/edtPassword"
@@ -27,6 +45,7 @@
         android:layout_height="77dp"
         android:ems="10"
         android:hint="Enter Password"
+        android:textColorHint="@color/white"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,6 +58,7 @@
         android:layout_height="77dp"
         android:ems="10"
         android:hint="Enter Employee code"
+        android:textColorHint="@color/white"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

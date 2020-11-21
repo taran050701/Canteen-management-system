@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hackathon"
+    android:background="@drawable/finalbackground"
     tools:context=".MainActivity">
 
 
@@ -12,26 +12,26 @@
         android:id="@+id/admin"
         android:layout_width="163dp"
         android:layout_height="59dp"
+        android:backgroundTint="#4D3412"
         android:text="Admin"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479" />
+        app:layout_constraintVertical_bias="0.322" />
 
     <Button
         android:id="@+id/student"
         android:layout_width="163dp"
         android:layout_height="59dp"
-        android:background="#F4F0F0"
         android:text="Student"
-        app:iconTint="#EDECEC"
+        android:backgroundTint="#4D3412"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.883"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614" />
+        app:layout_constraintVertical_bias="0.321" />
 </androidx.constraintlayout.widget.ConstraintLayout>

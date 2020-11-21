@@ -41,10 +41,10 @@
         app:layout_constraintVertical_bias="0.355" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/beverages"
         android:layout_width="398dp"
         android:layout_height="59dp"
-        android:text="Button"
+        android:text="Beverages"
         android:backgroundTint="#AB9559"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,10 +54,10 @@
         app:layout_constraintVertical_bias="0.532" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/lunch"
         android:layout_width="398dp"
         android:layout_height="59dp"
-        android:text="Button"
+        android:text="Lunch"
         android:backgroundTint="#AB9559"
 
         app:layout_constraintBottom_toBottomOf="parent"

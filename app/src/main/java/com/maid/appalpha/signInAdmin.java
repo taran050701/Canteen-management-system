@@ -19,11 +19,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class signInAdmin extends AppCompatActivity {
-Button btnLogin;
-EditText edtUsername,edtPassword;
-FirebaseDatabase firebaseDatabase,rootNode;
-DatabaseReference reference;
-    String username,password;
+    Button btnLogin;
+    EditText edtUsername, edtPassword;
+    DatabaseReference reference;
+    FirebaseDatabase firebaseDatabase,rootNode;
+    String username, password;
+
 
 
 
@@ -31,31 +32,24 @@ DatabaseReference reference;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_admin);
-        btnLogin=findViewById(R.id.login);
-        edtUsername=findViewById(R.id.edtUsername);
-        edtPassword=findViewById(R.id.edtPassword);
+        btnLogin = findViewById(R.id.login);
+        edtUsername = findViewById(R.id.edtUsername);
+        edtPassword = findViewById(R.id.edtPassword);
         firebaseDatabase = FirebaseDatabase.getInstance();
 
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("Login");
-//Get all the values
                 username = edtUsername.getText().toString();
                 password = edtPassword.getText().toString();
-                final DatabaseReference personDetails = firebaseDatabase.getReference("Login");
+                reference = rootNode.getReference("Admin");
+                final DatabaseReference personDetails = firebaseDatabase.getReference("Admin");
                 personDetails.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        Log.d("going", "hello");
-                        if (dataSnapshot.hasChild(username)) {
-                            String a = dataSnapshot.child(username).getKey();
-                            Log.d("trueee", dataSnapshot.child(username).getValue().toString());
-                            Toast.makeText(signInAdmin.this, "Already Exisitng", Toast.LENGTH_SHORT).show();
-
-                        }
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String id=snapshot.child("id").getValue().toString();
+                        Log.d("id123",id);
                     }
 
                     @Override
@@ -63,8 +57,11 @@ DatabaseReference reference;
 
                     }
                 });
+
+
+
+
             }
         });
     }
 }
-
